@@ -1,14 +1,22 @@
 import { useState } from 'react';
 import './App.css';
 
-function FavouriteColour() {
-  const [color, setColor] = useState("red");
-  return <h1>My favourite Colour is {color}!</h1>
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked me {count} times!</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+
+  )
 }
 
 function App() {
   return (
-    <FavouriteColour />
+    <Counter />
   )
 }
 
